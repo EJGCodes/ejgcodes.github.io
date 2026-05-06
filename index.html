@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evan Gonzalez</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- Name in top-right corner -->
+  <div class="name-badge">Evan Gonzalez</div>
+
+  <!-- VSCode title bar with theme toggle -->
+  <div class="title-bar">
+    <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+    <span class="title-text">about.md — Portfolio</span>
+    <div class="top-actions">
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme" title="Toggle theme">☀</button>
+    </div>
+  </div>
+
+  <!-- Tabs (primary nav) -->
+  <div class="tab-bar">
+    <a class="tab active" href="./index.html"><span class="dot"></span>about.md</a>
+    <a class="tab" href="./projects.html">projects.tsx</a>
+    <a class="tab" href="#skills">skills.json</a>
+    <a class="tab" href="#experience">experience.md</a>
+  </div>
+
+  <main class="container-app">
+
+    <!-- About -->
+    <section id="about" class="section hero">
+      <div class="panel">
+        <h1><span class="text-keyword">Hi!</span> I'm Evan Gonzalez</span></h1>
+        <p class="meta">
+          <span class="text-accent">Location:</span> New York Metropolitan &nbsp;·&nbsp;
+          <span class="text-accent">Age:</span> 17
+        </p>
+        <p class="text-muted-c mt-3 mb-0">
+          I am a passionate game developer and programmer with experience in game programming, software development, and full-stack web dev.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="panel">
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <h5 class="text-accent-2">// Programming Languages</h5>
+            <ul class="skill-list">
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> C++</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> C#</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> Lua</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> JavaScript</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> Python</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-accent-2">// Libraries / Frameworks</h5>
+            <ul class="skill-list">
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> Unreal Engine</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> Unity</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> Godot</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> Phaser (JS Game Library)</li>
+              <li><img src="./icons/lang.png" alt="" loading="lazy" /> React</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roles / Fields of Interest -->
+    <section id="roles" class="section">
+      <h2 class="section-title">Roles &amp; Fields of Interest</h2>
+      <div class="panel">
+        <p class="text-dim mb-2">// Ordered by interest / experience</p>
+        <ol class="ps-3 mb-0">
+          <li><span class="text-accent">Video Game Programming</span></li>
+          <li><span class="text-accent">Video Game Development & Design</span></li>
+          <li><span class="text-accent">Software Development</span></li>
+          <li><span class="text-accent">Full-Stack Web Development</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects (preview, 2 per category) -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <h5 class="text-accent mt-4">// Web</h5>
+      <div class="project-grid">
+        <article class="project-card">
+          <img class="cover" src="./icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
+          <div class="body">
+            <h4>[Web Project 1 name]</h4>
+            <p>[Short project description goes here.]</p>
+            <div>
+              <span class="tag lang">[Lang]</span>
+              <span class="tag">[Lib]</span>
+              <span class="tag type">Web</span>
+            </div>
+            <div class="links">
+              <a class="btn-vs" href="./project.html" target="_blank" rel="noopener">View more</a>
+              <a class="btn-vs" href="https://example.com" target="_blank" rel="noopener">Live</a>
+              <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img class="cover" src="./icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
+          <div class="body">
+            <h4>[Web Project 2 name]</h4>
+            <p>[Short project description goes here.]</p>
+            <div>
+              <span class="tag lang">[Lang]</span>
+              <span class="tag">[Framework]</span>
+              <span class="tag type">Web</span>
+            </div>
+            <div class="links">
+              <a class="btn-vs" href="./project.html" target="_blank" rel="noopener">View more</a>
+              <a class="btn-vs" href="https://example.com" target="_blank" rel="noopener">Live</a>
+              <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h5 class="text-accent mt-4">// Software</h5>
+      <div class="project-grid">
+        <article class="project-card">
+          <img class="cover" src="./icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
+          <div class="body">
+            <h4>[Software Project 1 name]</h4>
+            <p>[Short project description goes here.]</p>
+            <div>
+              <span class="tag lang">[Lang]</span>
+              <span class="tag type">Software</span>
+            </div>
+            <div class="links">
+              <a class="btn-vs" href="./project.html" target="_blank" rel="noopener">View more</a>
+              <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img class="cover" src="./icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
+          <div class="body">
+            <h4>[Software Project 2 name]</h4>
+            <p>[Short project description goes here.]</p>
+            <div>
+              <span class="tag lang">[Lang]</span>
+              <span class="tag type">Software</span>
+            </div>
+            <div class="links">
+              <a class="btn-vs" href="./project.html" target="_blank" rel="noopener">View more</a>
+              <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h5 class="text-accent mt-4">// Games</h5>
+      <div class="project-grid">
+        <article class="project-card">
+          <img class="cover" src="./icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
+          <div class="body">
+            <h4>[Game Project 1 name]</h4>
+            <p>[Short game description goes here.]</p>
+            <div>
+              <span class="tag lang">[Engine]</span>
+              <span class="tag type">Game</span>
+            </div>
+            <div class="links">
+              <a class="btn-vs" href="./project.html" target="_blank" rel="noopener">View more</a>
+              <a class="btn-vs" href="https://example.com" target="_blank" rel="noopener">Play</a>
+              <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn-vs" href="https://example.com/gdd" target="_blank" rel="noopener">GDD</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img class="cover" src="./icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
+          <div class="body">
+            <h4>[Game Project 2 name]</h4>
+            <p>[Short game description goes here.]</p>
+            <div>
+              <span class="tag lang">[Engine]</span>
+              <span class="tag type">Game</span>
+            </div>
+            <div class="links">
+              <a class="btn-vs" href="./project.html" target="_blank" rel="noopener">View more</a>
+              <a class="btn-vs" href="https://example.com" target="_blank" rel="noopener">Play</a>
+              <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn-vs" href="https://example.com/gdd" target="_blank" rel="noopener">GDD</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-4">
+        <a class="btn-vs primary" href="./projects.html">View all projects →</a>
+      </div>
+    </section>
+
+    <!-- Recent -->
+    <section id="recent" class="section">
+      <h2 class="section-title">Recent Commits &amp; Projects</h2>
+      <div class="panel">
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <h5 class="text-accent-2">// Recent Commits</h5>
+            <ul id="gh-commits" class="timeline">
+              <li><h5>[commit message goes here]</h5><div class="meta">[repo] · [date]</div></li>
+              <li><h5>[commit message goes here]</h5><div class="meta">[repo] · [date]</div></li>
+              <li><h5>[commit message goes here]</h5><div class="meta">[repo] · [date]</div></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-accent-2">// Recent Projects</h5>
+            <ul class="timeline">
+              <li><h5>[project name goes here]</h5><div class="meta">[date]</div></li>
+              <li><h5>[project name goes here]</h5><div class="meta">[date]</div></li>
+              <li><h5>[project name goes here]</h5><div class="meta">[date]</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="panel">
+        <ul class="timeline">
+          <li>
+            <h5>Computer Science — <span class="text-string">Bergen County Technical High School</span></h5>
+            <div class="meta">2023 — 2027</div>
+            <p>Gained strong experience in game development and web development.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="section">
+      <h2 class="section-title">Awards</h2>
+      <div class="panel">
+        <ul class="timeline">
+          <li><h5>5th Place @ NJ TSA State Conference: Video Game Design</h5><div class="meta">(2026)</div></li>
+          <li><h5>2nd Place @ NJ TSA State Conference Webmaster</h5><div class="meta">(2026)</div></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Status bar -->
+  <div class="status-bar">
+    <span>main</span>
+    <span>UTF-8</span>
+    <span>HTML</span>
+    <span class="spacer"></span>
+    <span id="clock">--:--</span>
+    <span>Ln 1, Col 1</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
