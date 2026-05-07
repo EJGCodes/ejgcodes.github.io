@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Software Project | Evan Gonzalez</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/icons/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="name-badge">EJGCodes</div>
+
+  <div class="title-bar">
+    <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+    <span class="title-text">project.html — Portfolio</span>
+  </div>
+
+  <div class="tab-bar">
+    <a class="tab" href="/index.html">about.md</a>
+    <a class="tab" href="/projects.html">projects.tsx</a>
+    <a class="tab active" href="#"><span class="dot"></span>[project-name].md</a>
+    <a class="tab" href="#overview">overview</a>
+    <a class="tab" href="#tools">tools</a>
+    <a class="tab" href="#assets">assets</a>
+  </div>
+
+  <main class="container-app">
+
+    <section class="section hero">
+      <div class="panel">
+        <h1>[Project Name goes here]</h1>
+        <p class="text-dim mb-2">Software</p>
+        <div>
+          <span class="tag lang">[Language]</span>
+          <span class="tag">[Library]</span>
+          <span class="tag type">[Type]</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <h2 class="section-title">Overview</h2>
+      <div class="panel">
+        <img src="/icons/project-placeholder.jpg" alt="[Project image]" class="img-fluid rounded mb-3" loading="lazy" />
+        <p class="text-muted-c">[Brief project description goes here. Talk about what it does, who it's for,
+          the problem it solves, and what's interesting about how its built.]</p>
+
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <a class="btn-vs primary" href="https://example.com" target="_blank" rel="noopener">Check it out →</a>
+          <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <h2 class="section-title">Languages &amp; Tools</h2>
+      <div class="panel">
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <h5 class="text-accent-2">// Languages</h5>
+            <ul class="skill-list">
+              <li><img src="/icons/lang.png" alt="" loading="lazy" /> [Language goes here]</li>
+              <li><img src="/icons/lang.png" alt="" loading="lazy" /> [Language goes here]</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-accent-2">// Libraries / Frameworks</h5>
+            <ul class="skill-list">
+              <li><img src="/icons/lang.png" alt="" loading="lazy" /> [Library goes here]</li>
+              <li><img src="/icons/lang.png" alt="" loading="lazy" /> [Library goes here]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="assets" class="section">
+      <h2 class="section-title">Assets, Resources, &amp; Attributions</h2>
+      <div class="panel">
+        <ul class="timeline">
+          <li><h5>[Asset / resource name]</h5><div class="meta">[Source / license]</div></li>
+          <li><h5>[Asset / resource name]</h5><div class="meta">[Source / license]</div></li>
+          <li><h5>[Asset / resource name]</h5><div class="meta">[Source / license]</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="text-center my-4">
+      <a class="btn-vs" href="/projects.html">← Back to all projects</a>
+    </div>
+
+  </main>
+
+  <div class="status-bar">
+    <span>main</span>
+    <span>UTF-8</span>
+    <span>HTML</span>
+    <span class="spacer"></span>
+    <span id="clock">--:--</span>
+    <span>Ln 1, Col 1</span>
+    <span>Spaces: 2</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
