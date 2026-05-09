@@ -11,9 +11,7 @@
 </head>
 <body>
 
-  <!-- Name in top-right corner -->
-
-  <!-- VSCode title bar with theme toggle -->
+  <!-- VSCode title bar -->
   <div class="title-bar">
     <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
     <div class="name-badge">EJGCodes</div>
@@ -40,10 +38,10 @@
           <span class="text-accent">Current Time In My Region (Timezone: America/New_York): </span><span id="timezoneClock">--:--</span>
         </p>
         <p class="text-muted-c mt-3 mb-0">
-          I'm a 17 year old, passionate, and dedicated developer & programmer with valuable experience in <span class="text-string">Video Game Development</span>, <span class="text-string">Software Development</span>, and <span class="text-string">Full-Stack Web Development</span>.
+          I'm a 17 year old passionate developer & programmer with valuable experience in <span class="text-string">Video Game Development</span>, <span class="text-string">Software Development</span>, and <span class="text-string">Full-Stack Web Development</span>.
           I have worked with various frameworks, libraries, and engines across all of these fields, including industry-standard game engines such as 
-          <span class="text-accent">Unreal Engine</span> and <span class="text-accent">Unity</span> as well as libraries and frameworks such as <span class="text-accent">React</span> and <span class="text-accent">Bootstrap</span>.
-          My goal is to create the best experiences possible for as many users as I can in every project I contribute to through great effort and programming skills.
+          <span class="text-accent">Unreal Engine</span> and <span class="text-accent">Unity</span> as well as libraries and frameworks commonly used in software & web dev such as <span class="text-accent">React</span> and <span class="text-accent">Bootstrap</span>.
+          My goal is to create the best experiences possible for as many users as I can in all the projects I create and contribute to.
         </p>
       </div>
     </section>
@@ -61,6 +59,7 @@
               <li><img src="/icons/lua.png" alt="" loading="lazy" /> Lua</li>
               <li><img src="/icons/js.png" alt="" loading="lazy" /> JavaScript</li>
               <li><img src="/icons/python.png" alt="" loading="lazy" /> Python</li>
+              <li><img src="/icons/ts.png" alt="" loading="lazy" /> Typescript</li>
             </ul>
           </div>
           <div class="col-12 col-md-6">
@@ -69,6 +68,7 @@
               <li><img src="/icons/unreal.png" alt="" loading="lazy" /> Unreal Engine</li>
               <li><img src="/icons/unity.png" alt="" loading="lazy" /> Unity</li>
               <li><img src="/icons/godot.png" alt="" loading="lazy" /> Godot</li>
+              <li><img src="/icons/phaser.png" alt="" loading="lazy" /> Phaser</li>
               <li><img src="/icons/react.png" alt="" loading="lazy" /> React</li>
               <li><img src="/icons/bootstrap.png" alt="" loading="lazy" /> Bootstrap</li>
             </ul>
@@ -77,25 +77,16 @@
       </div>
     </section>
 
-    <!-- Roles / Fields of Interest -->
+    <!-- Fields of Interest -->
     <section id="roles" class="section">
-      <h2 class="section-title">Fields of Interest &amp; Top Roles</h2>
+      <h2 class="section-title">Fields of Interest </h2>
       <div class="panel">
-        <p class="text-dim mb-2">// All ordered by general experience and interest</p>
-        <p class="text-dim mb-2">// Fields of Interest</p>
+        <p class="text-dim mb-2">// Fields of Interest/Experience</p>
         <ol class="ps-3 mb-0">
           <li><span class="text-accent">Video Game Programming</span></li>
           <li><span class="text-accent">Video Game Development & Design</span></li>
           <li><span class="text-accent">Software Development</span></li>
           <li><span class="text-accent">Full-Stack Web Development</span></li>
-        </ol>
-        <p></p>
-        <p class="text-dim mb-2">// Favorite Roles</p>
-        <ol class="ps-3 mb-0">
-          <li><span class="text-accent">Game Programmer & Designer</span></li>
-          <li><span class="text-accent">Software Developer</span></li>
-          <li><span class="text-accent">Front-end Web Design</span></li>
-          <li><span class="text-accent">Full-Stack Web Developer</span></li>
         </ol>
       </div>
     </section>
@@ -107,13 +98,12 @@
       <h5 class="text-accent mt-4">// Games</h5>
       <div class="project-grid">
         <article class="project-card">
-          <img class="cover" src="/icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
           <div class="body">
             <h4>Astrowave: Space Defense</h4>
             <p>Astrowave is a 2d space shooter game with roguelite elements. Players can chose from three different classes of ships and upgrade them across run to reach the highest level possible.</p>
             <div>
               <span class="tag lang">Phaser.js</span>
-              <span class="tag type">Game</span>
+              <span class="tag type">Web Game</span>
             </div>
             <div class="links">
               <a class="btn-vs" href="/projects/games/project.html" target="_blank" rel="noopener">View more</a>
@@ -126,7 +116,6 @@
       <h5 class="text-accent mt-4">// Software</h5>
       <div class="project-grid">
         <article class="project-card">
-          <img class="cover" src="/icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
           <div class="body">
             <h4>[Software Project 1 name]</h4>
             <p>[Short project description goes here.]</p>
@@ -135,7 +124,7 @@
               <span class="tag type">Software</span>
             </div>
             <div class="links">
-              <a class="btn-vs" href="/project.html" target="_blank" rel="noopener">View more</a>
+              <a class="btn-vs" href="/projects/software/project.html" target="_blank" rel="noopener">View more</a>
               <a class="btn-vs" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
@@ -145,14 +134,13 @@
       <h5 class="text-accent mt-4">// Web Apps</h5>
       <div class="project-grid">
         <article class="project-card">
-          <img class="cover" src="/icons/project-placeholder.jpg" alt="[Project image]" loading="lazy" />
           <div class="body">
             <h4>BergenConnect Resource Hub</h4>
             <p>A professional style community resource hub with pages for various types of resources and volunteering opportunities in Bergen County. Also includes easy to access info through integrated calendars, maps, and sign-up features.</p>
             <div>
               <span class="tag lang">Typescript</span>
               <span class="tag">React</span>
-              <span class="tag type">Web</span>
+              <span class="tag type">Professional Website</span>
             </div>
             <div class="links">
               <a class="btn-vs" href="projects/web/project.html" target="_blank" rel="noopener">View more</a>

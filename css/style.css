@@ -82,7 +82,6 @@ h2::before { content: "// "; color: var(--text-dim); }
   padding: .35rem .9rem;
   display: flex;
   align-items: center;
-  gap: .6rem;
   font-size: .8rem;
   color: var(--text-dim);
   transition: background .3s ease, border-color .3s ease;
