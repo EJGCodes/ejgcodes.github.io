@@ -103,7 +103,7 @@ h2::before { content: "// "; color: var(--text-dim); }
 
 .tab-bar {
   position: sticky;
-  top: 30px;
+  top: 1.9rem;
   z-index: 1039;
   background: var(--bg-tabbar);
   border-bottom: 1px solid var(--border);
