@@ -3,7 +3,7 @@
   const GITHUB_REPO = "";
   const COMMIT_COUNT = 5;
   const RECENT_REPO_COUNT = 6;
-  const CACHE_VERSION = 'v2-commits-api-first';
+  const CACHE_VERSION = 'v3-multi-commit-per-repo';
   const CACHE_MS = 10 * 60 * 1000; // 10 minutes
 
   function setupToggle() {
@@ -40,6 +40,18 @@
       { threshold: 0.12 }
     );
     els.forEach((e) => io.observe(e));
+  }
+
+  //Current time in my timezone (nyTime)
+  function setupTimezoneClock(){
+    const el = document.getElementById('timezoneClock')
+    if (!el) return;
+    const tick = () => {
+      const d = new Date();
+      el.textContent = d.toLocaleString([], { hour: '2-digit', minute: '2-digit' }, "en-US", { timeZone: "America/New_York" })
+    };
+    tick();
+    setInterval(tick, 30000)
   }
 
   // Live clock in status bar
@@ -118,7 +130,7 @@
         if (r.ok) {
           const repos = await r.json();
           const results = await Promise.all(
-            repos.map((repo) => fetchRepoCommits(user, repo.name, 1).catch(() => []))
+            repos.map((repo) => fetchRepoCommits(user, repo.name, COMMIT_COUNT).catch(() => []))
           );
           commits = results.flat()
             .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -219,6 +231,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     setupToggle();
     setupReveal();
+    setupTimezoneClock()
     setupClock();
     setupGithubCommits();
     setupGithubProjects();

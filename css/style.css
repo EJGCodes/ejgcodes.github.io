@@ -192,7 +192,7 @@ body { padding-bottom: 32px; }
 /* Top-right name badge */
 .name-badge {
   position: fixed;
-  top: 4px; right: 12px;
+  top: 0.05rem; right: 0.5rem;
   z-index: 1050;
   font-size: .8rem;
   color: var(--text);
@@ -325,7 +325,6 @@ body { padding-bottom: 32px; }
   .name-badge { font-size: .7rem; }
   .tab-bar .tab { padding: .5rem .7rem; font-size: .78rem; }
   .container-app { padding: 1rem .75rem; }
-  .title-bar .title-text { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
