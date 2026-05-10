@@ -1,14 +1,25 @@
-// Theme toggle (persists via localStorage)
-  // ---- Set this to your GitHub handle to enable live commits ----
-  // Leave as "" to keep the static placeholder list in index.html.
+(function () {
   const GITHUB_USERNAME = "EJGCodes";
-  // OPTIONAL: pin to a specific repo (e.g. "my-portfolio"). Leave "" to auto-pick
-  // the most recently pushed public repo when the events feed is empty.
-  const GITHUB_REPO = "ejgcodes.github.io";
+  const GITHUB_REPO = "";
   const COMMIT_COUNT = 5;
   const RECENT_REPO_COUNT = 6;
   const CACHE_VERSION = 'v2-commits-api-first';
   const CACHE_MS = 10 * 60 * 1000; // 10 minutes
+
+  function setupToggle() {
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    const updateLabel = () => {
+      btn.textContent = root.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
+    };
+    updateLabel();
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('vscode-portfolio-theme', next);
+      updateLabel();
+    });
+  }
 
   // Reveal-on-scroll animations
   function setupReveal() {
@@ -29,18 +40,6 @@
       { threshold: 0.12 }
     );
     els.forEach((e) => io.observe(e));
-  }
-
-  //Current time in my timezone (nyTime)
-  function setupTimezoneClock(){
-    const el = document.getElementById('timezoneClock')
-    if (!el) return;
-    const tick = () => {
-      const d = new Date();
-      el.textContent = d.toLocaleString([], { hour: '2-digit', minute: '2-digit' }, "en-US", { timeZone: "America/New_York" })
-    };
-    tick();
-    setInterval(tick, 30000)
   }
 
   // Live clock in status bar
@@ -161,9 +160,67 @@
     }
   }
 
+  // ---- GitHub recent projects ----
+  async function fetchRecentRepos(user, limit) {
+    const cacheKey = `gh-projects:${CACHE_VERSION}:${user}:${limit}`;
+    try {
+      const raw = localStorage.getItem(cacheKey);
+      if (raw) {
+        const { ts, data } = JSON.parse(raw);
+        if (Date.now() - ts < CACHE_MS) return data;
+      }
+    } catch (_) { /* ignore */ }
+
+    const res = await fetch(`https://api.github.com/users/${user}/repos?sort=pushed&per_page=${limit * 2}`);
+    console.log('[gh] projects status:', res.status);
+    if (!res.ok) return [];
+    const repos = await res.json();
+    const data = repos
+      .filter((r) => !r.fork)
+      .slice(0, limit)
+      .map((r) => ({
+        name: r.name,
+        description: r.description || '',
+        date: r.pushed_at,
+        url: r.html_url,
+        language: r.language,
+        stars: r.stargazers_count,
+      }));
+
+    try {
+      localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), data }));
+    } catch (_) { /* ignore */ }
+    return data;
+  }
+
+  async function setupGithubProjects() {
+    const list = document.getElementById('gh-projects');
+    if (!list || !GITHUB_USERNAME) return;
+    try {
+      const repos = await fetchRecentRepos(GITHUB_USERNAME, RECENT_REPO_COUNT);
+      if (!repos.length) {
+        list.innerHTML = `<li><h5>No public projects</h5><div class="meta">github.com/${escapeHtml(GITHUB_USERNAME)}</div></li>`;
+        return;
+      }
+      list.innerHTML = repos.map((r) => `
+        <li>
+          <h5><a href="${r.url}" target="_blank" rel="noopener">${escapeHtml(r.name)}</a></h5>
+          <div class="meta">
+            ${r.language ? escapeHtml(r.language) + ' · ' : ''}updated ${new Date(r.date).toLocaleDateString()}
+          </div>
+          ${r.description ? `<p>${escapeHtml(r.description)}</p>` : ''}
+        </li>
+      `).join('');
+    } catch (err) {
+      list.innerHTML = `<li><h5>Could not load projects</h5><div class="meta">${escapeHtml(err.message)}</div></li>`;
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    setupToggle();
     setupReveal();
-    setupTimezoneClock();
     setupClock();
     setupGithubCommits();
+    setupGithubProjects();
   });
+})();
