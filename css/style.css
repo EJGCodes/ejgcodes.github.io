@@ -45,7 +45,7 @@ html, body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Fira Code', 'Cascadia Code', Menlo, Consolas, 'Courier New', monospace;
-  font-size: 15px;
+  font-size: 0.938rem;
   line-height: 1.6;
   margin: 0;
   scroll-behavior: smooth;
@@ -59,7 +59,7 @@ a:hover { color: var(--text); text-decoration: underline; }
 h1, h2, h3, h4, h5 {
   color: var(--text);
   font-weight: 600;
-  letter-spacing: .3px;
+  letter-spacing: 0.019rem;
 }
 h2::before { content: "// "; color: var(--text-dim); }
 .section-title { color: var(--keyword); }
@@ -72,7 +72,7 @@ h2::before { content: "// "; color: var(--text-dim); }
 .text-string  { color: var(--accent-3) !important; }
 .text-keyword { color: var(--keyword) !important; }
 
-/* ---------- VSCode shell ---------- */
+/* ---------- VSCode Shell ---------- */
 .title-bar {
   position: sticky;
   top: 0;
@@ -192,7 +192,7 @@ body { padding-bottom: 32px; }
 /* Top-right name badge */
 .name-badge {
   position: fixed;
-  top: 0.05rem; right: 0.5rem;
+  top: 0.175rem; right: 0.1rem;
   z-index: 1050;
   font-size: .8rem;
   color: var(--text);
@@ -203,7 +203,7 @@ body { padding-bottom: 32px; }
   transition: background .3s ease, border-color .3s ease, color .3s ease;
 }
 
-/* ---------- Social buttons ---------- */
+/* ---------- Social Media Buttons ---------- */
 .social-row { display: flex; flex-wrap: wrap; gap: .6rem; }
 .social-btn {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -249,7 +249,7 @@ body { padding-bottom: 32px; }
 .tag.lang { color: var(--accent); }
 .tag.type { color: var(--keyword); }
 
-/* ---------- Project cards ---------- */
+/* ---------- Project Cards ---------- */
 .project-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .project-card {
   background: var(--bg-elev);
@@ -319,9 +319,9 @@ body { padding-bottom: 32px; }
 .timeline .meta { font-size: .75rem; color: var(--text-dim); }
 .timeline p { margin: .25rem 0 0; color: var(--text-muted); font-size: .85rem; }
 
-/* ---------- Responsive ---------- */
+/* ---------- Responsiveness/Resizing ---------- */
 @media (max-width: 600px) {
-  html, body { font-size: 14px; }
+  html, body { font-size: 0.875rem; }
   .name-badge { font-size: .7rem; }
   .tab-bar .tab { padding: .5rem .7rem; font-size: .78rem; }
   .container-app { padding: 1rem .75rem; }

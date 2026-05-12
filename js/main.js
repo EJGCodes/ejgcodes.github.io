@@ -66,7 +66,6 @@
     setInterval(tick, 30000);
   }
 
-  // ---- GitHub recent commits (see files/github-integration.md) ----
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -119,7 +118,7 @@
       }
     } catch (_) { /* ignore */ }
 
-    // 1) Read actual repo commits first. This includes commits made in GitHub's web UI.
+    // Read actual repo commits first. This includes commits made in GitHub's web UI.
     let commits = [];
     try {
       if (GITHUB_REPO) {
@@ -172,7 +171,7 @@
     }
   }
 
-  // ---- GitHub recent projects ----
+  // ---- Recent GitHub Projects ----
   async function fetchRecentRepos(user, limit) {
     const cacheKey = `gh-projects:${CACHE_VERSION}:${user}:${limit}`;
     try {
@@ -218,9 +217,8 @@
         <li>
           <h5><a href="${r.url}" target="_blank" rel="noopener">${escapeHtml(r.name)}</a></h5>
           <div class="meta">
-            ${r.language ? escapeHtml(r.language) + ' · ' : ''}updated ${new Date(r.date).toLocaleDateString()}
+            ${r.language ? escapeHtml(r.language) + ' · ' : ''}Updated ${new Date(r.date).toLocaleDateString()}
           </div>
-          ${r.description ? `<p>${escapeHtml(r.description)}</p>` : ''}
         </li>
       `).join('');
     } catch (err) {
@@ -231,7 +229,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     setupToggle();
     setupReveal();
-    setupTimezoneClock()
+    setupTimezoneClock();
     setupClock();
     setupGithubCommits();
     setupGithubProjects();
